@@ -22,15 +22,7 @@
 
 ## Purpose
 
-**<u>Scripts Collection:</u>** Collection of vanilla JavaScript ES6 scripts to grabs (scrapes) data from video courses and tutorials for use in building the header to my notes files.
-
-Here is some background on the origin of this repo:
-
-**PROBLEM:** When I take LinkedIn Learning courses or follow a YouTube coding tutorial I find it easier to remember detailed technical processes by taking detailed technical notes. It takes a long time already to listen to the videos and make my notes. But, I was spending 30 minutes or more manually typing in boilerplate course info like instructor name, purpose, course expectations, duration, instructor avatar url, etc. Formatting this data added even more time.
-
-**ACTION:** I knew that if I could automate gathering the course details with JavaScript ES6 DOM traversal, that I would save anywhere from 30 minutes to an hour and be able to focus more time to note-taking. I decided to target LinkedIn Learning course pages first. It took me about an hour to write the code - nothing fancy, just basic procedural Ecmascript2015 (no OOP classes or module exports). The key was just examining the source code and locating the right CSS selectors. After another hour of troubleshooting and tweaking, I had a working data collector that did exactly what I needed it to do every time.
-
-**SOLUTION:** Being able to run a script to automate data collection saved me 30 minutes to an hour each time I had to take notes on a new course.
+Scrapes data from Reddit post list and formats as CSV. Data points include title, subreddit, post url, etc.
 
 
 ## Included Scripts
