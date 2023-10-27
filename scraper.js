@@ -49,6 +49,7 @@ let sel_voteBal   = '._1rZYMD_4xY3gRcSS3p8ODO'
 let sel_voteDir   = '[aria-label="upvote"][aria-pressed="true"]'
 let sel_comments  = '[data-click-id="comments"]'
 
+// Get all the results by row
 let postRows = document.querySelectorAll(sel_postRows)
 
 
