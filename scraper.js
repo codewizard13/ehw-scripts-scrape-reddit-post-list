@@ -154,3 +154,29 @@ let thisOut = `
 
 }
 printMarkdownTable(scraped)
+
+
+
+/**
+ * printIdAndTitle: Print post ID and title only. Very minimal output
+ * 
+ * @arg: {array} data - scraped Reddit post list data; array of objects
+ */
+function printIdAndTitle(data) {
+
+  out = `
+|ID|TITLE|
+|-----|-----|`
+
+  for (i=0; i<data.length; i++) {
+    let thisObj = data[i]    
+
+let thisOut = `
+|${thisObj.postId} | ${thisObj.title}|`
+
+    out += thisOut
+  }
+  console.log(out)
+
+}
+printIdAndTitle(scraped)

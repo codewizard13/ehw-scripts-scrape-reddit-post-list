@@ -58,15 +58,28 @@ Votes: 21 Positive
 
 Note: The `<br>` tag is what lets to contents of a column/cell span multiple lines. This looks much better on the backend in VSCode when you have a formatted in place. I do "CTRL+SHIFT+P" > "Format Document".
 
+Also, I have formatted these tables in VSCCode; in dev console the print messier without straight columns.
+
 ~~~
-|LEFT|RIGHT|
-|-|-|
-|Post ID: t3_15tt1xu | Title: How to combine multiple nested CSS files into one?<br>Comment Count: 1 Comment<br>Votes: 1 Positive|
-|Post ID: t3_15s6g6h | Title: Site speed improvements on high-speed hosts (WPX and WPEngine)?<br>Comment Count: 0 Comments<br>Votes: 1 Positive|
-|Post ID: t3_1535yi7 | Title: How do I test Redirection plugin between staging and dev sites?<br>Comment Count: 11 Comments<br>Votes: 2 Positive|
-|Post ID: t3_136qoy5 | Title: Simple Multiple Forums Notifications Aggregator?<br>Comment Count: 3 Comments<br>Votes: 1 Positive|
-|Post ID: t3_17h270p | Title: Best WordPress plugin for automatic backup to Google SHARED DRIVE<br>Comment Count: 18 Comments<br>Votes: 1 Positive|
-|Post ID: t3_17g5fir | Title: Are there any plugins to BATCH scale images in Figma?<br>Comment Count: 5 Comments<br>Votes: 1 Positive|
+| LEFT                | RIGHT                                                                                                                       |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Post ID: t3_15tt1xu | Title: How to combine multiple nested CSS files into one?<br>Comment Count: 1 Comment<br>Votes: 1 Positive                  |
+| Post ID: t3_15s6g6h | Title: Site speed improvements on high-speed hosts (WPX and WPEngine)?<br>Comment Count: 0 Comments<br>Votes: 1 Positive    |
+| Post ID: t3_1535yi7 | Title: How do I test Redirection plugin between staging and dev sites?<br>Comment Count: 11 Comments<br>Votes: 2 Positive   |
+| Post ID: t3_136qoy5 | Title: Simple Multiple Forums Notifications Aggregator?<br>Comment Count: 3 Comments<br>Votes: 1 Positive                   |
+| Post ID: t3_17h270p | Title: Best WordPress plugin for automatic backup to Google SHARED DRIVE<br>Comment Count: 18 Comments<br>Votes: 1 Positive |
+| Post ID: t3_17g5fir | Title: Are there any plugins to BATCH scale images in Figma?<br>Comment Count: 5 Comments<br>Votes: 1 Positive              |
+~~~
+
+### printIdAndTitle()
+
+~~~
+| ID         | TITLE                                                                                               |
+| ---------- | --------------------------------------------------------------------------------------------------- |
+| t3_15tt1xu | How to combine multiple nested CSS files into one?                                                  |
+| t3_15s6g6h | Site speed improvements on high-speed hosts (WPX and WPEngine)?                                     |
+| t3_1535yi7 | How do I test Redirection plugin between staging and dev sites?                                     |
+| t3_136qoy5 | Simple Multiple Forums Notifications Aggregator?                                                    |
 ~~~
 
 
