@@ -128,3 +128,29 @@ function printReportForConsole(data) {
 
 }
 printReportForConsole(scraped)
+
+
+
+/**
+ * printMarkdownTable: Print results formatted for a markdown table with pipes "|"
+ * 
+ * @arg: {array} data - scraped Reddit post list data; array of objects
+ */
+function printMarkdownTable(data) {
+
+  out = `
+|LEFT|RIGHT|
+|-|-|`
+
+  for (i=0; i<data.length; i++) {
+    let thisObj = data[i]    
+
+let thisOut = `
+|Post ID: ${thisObj.postId} | Title: ${thisObj.title}<br>Comment Count: ${thisObj.commentCount}<br>Votes: ${thisObj.voteBal} ${thisObj.voteDir}|`
+
+    out += thisOut
+  }
+  console.log(out)
+
+}
+printMarkdownTable(scraped)
