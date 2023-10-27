@@ -85,6 +85,8 @@ function scrapeData() {
     outObj.subred = subred
     outObj.pubDate = pubDate
     outObj.commentCount = commentCount
+    outObj.voteBal = voteBal
+    outObj.voteDir = voteDir
     
 
 // console.log(outObj)
@@ -120,7 +122,7 @@ function printReportForConsole(data) {
     Comment Count: ${thisObj.commentCount}
     Votes: ${thisObj.voteBal} ${thisObj.voteDir}
     `
-    console.log(console_out)
+    console.log(thisObj)
 
   }
 
