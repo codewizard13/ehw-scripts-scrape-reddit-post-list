@@ -86,19 +86,43 @@ function scrapeData() {
     outObj.pubDate = pubDate
     outObj.commentCount = commentCount
     
-let console_out = `
-Post ID: ${postId} | Title: ${title}
-Comment Count: ${commentCount}
-Votes: ${voteBal} ${voteDir}
-`
+
 // console.log(outObj)
 
     // console.log([title, `${voteBal} ${voteDir}`, commentCount])
     results.push(outObj)
   }
 
-  console.log(results)
+  // console.log(results)
+  return results
 
 }
 scrapeData()
 
+
+let scraped = scrapeData()
+
+
+/**
+ * printReportForConsole: Print results formatted to look good in dev console, like rows of text
+ * 
+ * @arg: {array} data - scraped Reddit post list data; array of objects
+ */
+function printReportForConsole(data) {
+
+  // console.log(data)
+
+  for (i=0; i<data.length; i++) {
+    let thisObj = data[i]    
+
+    let console_out = `
+    Post ID: ${thisObj.postId} | Title: ${thisObj.title}
+    Comment Count: ${thisObj.commentCount}
+    Votes: ${thisObj.voteBal} ${thisObj.voteDir}
+    `
+    console.log(console_out)
+
+  }
+
+}
+printReportForConsole(scraped)
