@@ -122,7 +122,7 @@ function printReportForConsole(data) {
     Comment Count: ${thisObj.commentCount}
     Votes: ${thisObj.voteBal} ${thisObj.voteDir}
     `
-    console.log(thisObj)
+    console.log(console_out)
 
   }
 
