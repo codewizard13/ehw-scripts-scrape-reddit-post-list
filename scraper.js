@@ -34,7 +34,7 @@ Demonstrates:
 */
 
 
-let outObj = {}
+let results = []
 
 // SELECTORS:
 
@@ -52,33 +52,53 @@ let sel_comments  = '[data-click-id="comments"]'
 // Get all the results by row
 let postRows = document.querySelectorAll(sel_postRows)
 
+function scrapeData() {
+  // LOOP through each row and print single values for each property
+  for (i=0; i<postRows.length; i++) {
 
-// LOOP through each row and print single values for each property
-for (i=0; i<postRows.length; i++) {
+    let outObj = {}
 
-  let curPost = postRows[i]
-  console.log(`curPost:`, curPost)
-  
-  let votesCol = curPost.querySelector(sel_voteCol)
-  let deetsCol = curPost.querySelector(sel_deetsCol)
-  
-  // votesCol.style.backgroundColor = "red";
-  // deetsCol.style.backgroundColor = "cadetblue";
-  
-  let title = deetsCol.querySelector(sel_title).innerText
-  let flair = deetsCol.querySelector(sel_flair) ? deetsCol.querySelector(sel_flair).innerText : ""
-  let subred = deetsCol.querySelector(sel_subred).innerText
-  let pubDate = deetsCol.querySelector(sel_pubDate).innerText
-  let comments = deetsCol.querySelector(sel_comments) ? deetsCol.querySelector(sel_comments).innerText : ""
-  
-  let voteBal = votesCol.querySelector(sel_voteBal).innerText
-  let voteDir = votesCol.querySelector(sel_voteDir) ? "Positive" : "Negative"
-  
-  
-  // outObj.voteCol = voteCol
-  // outObj.deetsCol = deetsCol
-  // outObj.title = title
-  
-  console.log([title, `${voteBal} ${voteDir}`, comments])
+    let curPost = postRows[i]
+    // console.log(`curPost:`, curPost)
+
+    
+    let votesCol = curPost.querySelector(sel_voteCol)
+    let deetsCol = curPost.querySelector(sel_deetsCol)
+    
+    // votesCol.style.backgroundColor = "red";
+    // deetsCol.style.backgroundColor = "cadetblue";
+    
+    let postId = curPost.id
+    let title = deetsCol.querySelector(sel_title).innerText
+    let flair = deetsCol.querySelector(sel_flair) ? deetsCol.querySelector(sel_flair).innerText : ""
+    let subred = deetsCol.querySelector(sel_subred).innerText
+    let pubDate = deetsCol.querySelector(sel_pubDate).innerText
+    let commentCount = deetsCol.querySelector(sel_comments) ? deetsCol.querySelector(sel_comments).innerText : ""
+    
+    let voteBal = votesCol.querySelector(sel_voteBal).innerText
+    let voteDir = votesCol.querySelector(sel_voteDir) ? "Positive" : "Negative"
+    
+    // BUILD return object
+    outObj.title = title
+    outObj.postId = postId
+    outObj.flair = flair
+    outObj.subred = subred
+    outObj.pubDate = pubDate
+    outObj.commentCount = commentCount
+    
+let console_out = `
+Post ID: ${postId} | Title: ${title}
+Comment Count: ${commentCount}
+Votes: ${voteBal} ${voteDir}
+`
+// console.log(outObj)
+
+    // console.log([title, `${voteBal} ${voteDir}`, commentCount])
+    results.push(outObj)
+  }
+
+  console.log(results)
 
 }
+scrapeData()
+
