@@ -38,12 +38,22 @@ _Scraped results data in Chrome dev console_
     
 ## Sample Results: 
 
+### Original
 ~~~
 (3) ['Which WordPress plugin companies have the best support?', '20 Positive', '47 Comments']
 0: "Which WordPress plugin companies have the best support?"
 1: "20 Positive"
 2: "47 Comments"
 ~~~
+
+### printReportForConsole()
+
+~~~
+Post ID: t3_17flsif | Title: Which WordPress plugin companies have the best support?
+Comment Count: 47 Comments
+Votes: 21 Positive
+~~~
+
 
 ## Requires
 * Browser logged into Reddit account with developer console exposed.
