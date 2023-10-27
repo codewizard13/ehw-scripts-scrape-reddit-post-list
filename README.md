@@ -12,7 +12,7 @@
 
 <img align="left" alt="JavaScript" title="JavaScript" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="padding-right:10px;" />
 
-<img align="left" alt="Reddit" title="Reddit"  src="/img/reddit-logo-2436.svg" />
+<img align="left" alt="Reddit" title="Reddit" width="26px" src="/img/reddit-logo-2436.svg" style="padding-right:10px;" />
 
 <img align="left" alt="Git" title="Git" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style="padding-right:10px;" />
 
